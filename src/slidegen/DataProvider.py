@@ -1,4 +1,7 @@
-class DataProvider(object):
+from glob import glob
+import random
+
+class DataProviderBase(object):
     def __init__(self):
         '''
         Init your data provider
@@ -27,36 +30,69 @@ class DataProvider(object):
         '''
         raise NotImplementedError('Please ')
 
-    def text(self)
+    def text(self):
         '''
         generate an paragraph for slide content
         '''
         raise NotImplementedError('Please ')
 
-class FakeDataProvider(DataProvider):
-    IMAGES = '''
-        http://i.imgur.com/AzYR9Jg.gif
-        http://i.imgur.com/Mfc3anw.gif
-        http://i.imgur.com/rqcnmc1.gif
-        http://i.imgur.com/I1K6Tr0.gif
-        http://i.imgur.com/XAbExXi.gif
-        http://i.imgur.com/ehB8CFG.gif
-        http://i.imgur.com/uL4ROxF.gif
-        http://i.imgur.com/MI8OE8L.gif
-        http://i.imgur.com/7ZlanhU.gif
-        http://i.imgur.com/sU6f1Ir.gif
-    '''.split()
-
+class DataProvider(DataProviderBase):
     def __init__(self):
         self.counter = 0
 
     def image(self, size='medium'):
-        self.counter += 1
-        return FakeDataProvider.IMAGES[self.counter]
+        return random.choice(glob('data/img/*'))
+
+    def who(self):
+        return random.choice([
+            'Denny', 'RS', '開源社長', '大萌神', '畢總召', 'Mouse',
+            'Inndy', 'Jenny', 'HackNTU 總召', '蟆總統', '王立委'
+        ])
+
+    def company(self):
+        return random.choice([
+            'Elppa', 'Alset', 'MBI', 'LargeHard',
+            'Elcaro', 'Allizom', 'Edonil', 'SUSA',
+            'Reca', 'Elgoog', 'Letin', 'CafeGot',
+            '大硬鐵門'
+        ])
+
+    def product(self):
+        return random.choice([
+            'CamKoob', 'PhoneI', 'Suxen', 'TenPhone',
+            '個資', '雲端平台', '開發版', '作業系統',
+            '作業系統'
+        ])
+
+    def buzz(self):
+        return random.choice([
+            '雲端', '物連網', '大數據', '機器學習', '深度學習',
+            '駭客', '創業', '開源', '資料探勘', '敏捷開發', '矽谷'
+        ])
+
+    def topic(self):
+        return ''.join(set(self.buzz() for _ in range(4)))
+
+    def title(self):
+        return random.choice([
+            '十億人都驚呆了！%s憑空產生能源' % self.company(),
+            '%s 推出新款 %s，完全開源！' % (self.company(), self.product()),
+            '%s 宣布，%s旗下%s即將開源' % (self.who(), self.company(), self.product()),
+            '%s %s即將全面開源？！' % (self.company(), self.product())
+        ])
+
+    def text(self):
+        pass
 
 if __name__ == '__main__':
-    p = FakeDataProvider()
-    print(p.image())
-    print(p.image())
-    print(p.image())
-    print(p.image())
+    p = DataProvider()
+    print('Topic = %s' % p.topic())
+    print('Topic = %s' % p.topic())
+    print('Topic = %s' % p.topic())
+    print('Topic = %s' % p.topic())
+    print('Title = %s' % p.title())
+    print('Title = %s' % p.title())
+    print('Title = %s' % p.title())
+    print('Title = %s' % p.title())
+    print('Title = %s' % p.title())
+    print('Title = %s' % p.title())
