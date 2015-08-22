@@ -64,6 +64,13 @@ class ItemList(MarkdownObject):
     def render(self):
         return '%s\n' % '\n'.join('- %s' % item for item in self.items)
 
+class Seperator(MarkdownObject):
+    def __init__(self):
+        pass
+
+    def render(self):
+        return '---\n\n'
+
 if __name__ == '__main__':
     doc = MarkdownDocument()
     doc.add(Heading('SlideGen Project'))
