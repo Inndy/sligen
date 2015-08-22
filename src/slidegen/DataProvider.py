@@ -1,5 +1,36 @@
 class DataProvider(object):
     def __init__(self):
+        '''
+        Init your data provider
+        '''
+        raise NotImplementedError('Please ')
+
+    def image(self, size):
+        '''
+        size in ['big', 'medium', 'small']
+
+        big for full page background
+        medium for a foreground image
+        small for half-page image
+        '''
+        raise NotImplementedError('Please ')
+
+    def topic(self):
+        '''
+        generate a slide topic
+        '''
+        raise NotImplementedError('Please ')
+
+    def title(self):
+        '''
+        generate a slide page title
+        '''
+        raise NotImplementedError('Please ')
+
+    def text(self)
+        '''
+        generate an paragraph for slide content
+        '''
         raise NotImplementedError('Please ')
 
 class FakeDataProvider(DataProvider):
