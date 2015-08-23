@@ -4,6 +4,7 @@ from slidegen import DataProvider
 g = Generator(DataProvider())
 
 print('''
+title: Pitching like a boss
 controls: false
 output: slide.html
 
