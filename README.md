@@ -16,3 +16,7 @@ An slide generator that makes you pitch like a boss.
     - beautifulsoup4
     - requests
     - jieba
+
+## License
+
+[MIT License](LICENSE)
