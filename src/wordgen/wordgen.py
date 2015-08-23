@@ -1,6 +1,6 @@
 import random, itertools
 
-class WordGen:
+class WordGen(object):
     def __init__(self):
         self.verb  = []
         self.other = []
