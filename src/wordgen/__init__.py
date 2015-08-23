@@ -1,1 +1,1 @@
-from .Wordgen import Wordgen
+from .wordgen import Wordgen
