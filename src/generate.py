@@ -39,7 +39,7 @@ g = GeneratorBridge(g, sys.argv[1])
 
 g.cover()
 for i in range(18):
-    if random.randint(0, 100) < 77:
+    if random.randint(0, 100) < 83:
         g.content()
     else:
         g.full_image()
