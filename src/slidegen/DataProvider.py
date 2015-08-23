@@ -85,7 +85,7 @@ class DataProvider(DataProviderBase):
             '%s旗下的%s將會內建%s' % (self.company(), self.product(), self.product()),
             '%s會在近期內推出%s' % (self.company(), self.product()),
             '啊哈哈哈你看看你',
-            '%s未來將取代%s', (self.product(), self.product()),
+            '%s未來將取代%s' % (self.product(), self.product()),
         ])
 
     def text(self):
