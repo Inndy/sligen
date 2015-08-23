@@ -24,7 +24,7 @@ class GeneratorBridge(object):
 
     def __hook(self, val):
         self.index += 1
-        with open(os.path.join(self.path, '%.3d.md' % self.index), 'w') as fo:
+        with open(os.path.join(self.path, '%.3d.md' % self.index), 'w', encoding='utf-8') as fo:
             fo.write(val)
         return val
 
