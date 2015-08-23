@@ -84,7 +84,6 @@ class DataProvider(DataProviderBase):
             '這邊有一批好便宜的%s啊' % (self.product()),
             '%s旗下的%s將會內建%s' % (self.company(), self.product(), self.product()),
             '%s會在近期內推出%s' % (self.company(), self.product()),
-            '啊哈哈哈你看看你',
             '%s未來將取代%s' % (self.product(), self.product()),
         ])
 
