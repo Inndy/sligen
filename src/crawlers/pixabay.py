@@ -1,6 +1,11 @@
 from .crawler import Crawler
 from .tools import *
-from .config import pixbay as config
+
+try:
+    from .config import pixbay as config
+except ImportError:
+    print('Please config src/crawlers/config.py')
+    exit(1)
 
 class pixabay(Crawler):
     def __init__(self):
