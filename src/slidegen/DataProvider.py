@@ -82,7 +82,7 @@ class DataProvider(DataProviderBase):
             '%s宣布%s的bug全部當成feature' % (self.who(), self.product()),
             '只有%s才是正義，其他的都應該廢除' % (self.product()),
             '這邊有一批好便宜的%s啊' % (self.product()),
-            '%s旗下的%s將會內建%s', % (self.company(), self.product(), self.product()),
+            '%s旗下的%s將會內建%s' % (self.company(), self.product(), self.product())
         ])
 
     def text(self):
