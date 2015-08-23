@@ -4,7 +4,7 @@ class WordGen:
     def __init__(self):
         self.verb  = []
         self.other = []
-        f = open('../../data/buzzword.txt', 'r')
+        f = open('data/buzzword.txt', 'r')
         for line in f.readlines():
             dat   = line.split('\t')
             word  = dat[0]
