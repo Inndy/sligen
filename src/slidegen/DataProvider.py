@@ -66,7 +66,7 @@ class DataProvider(DataProviderBase):
 
     def buzz(self):
         return random.choice([
-            '雲端', '物連網', '大數據', '機器學習', '深度學習',
+            '雲端', '物聯網', '大數據', '機器學習', '深度學習',
             '駭客', '創業', '開源', '資料探勘', '敏捷開發', '矽谷'
         ])
 
@@ -79,7 +79,10 @@ class DataProvider(DataProviderBase):
             '%s推出新款%s，完全開源！' % (self.company(), self.product()),
             '%s宣布，%s旗下%s即將開源' % (self.who(), self.company(), self.product()),
             '%s %s即將全面開源？！' % (self.company(), self.product()),
-            '%s宣布%s的bug全部當成feature' % (self.who(), self.product())
+            '%s宣布%s的bug全部當成feature' % (self.who(), self.product()),
+            '只有%s才是正義，其他的都應該廢除' % (self.product()),
+            '這邊有一批好便宜的%s啊' % (self.product()),
+            '%s旗下的%s將會內建%s', % (self.company(), self.product(), self.product()),
         ])
 
     def text(self):
