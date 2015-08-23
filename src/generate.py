@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 from slidegen import Generator
 from slidegen import DataProvider
 from wordgen import Wordgen
@@ -37,7 +38,8 @@ g = Generator(WordgenProvider())
 g = GeneratorBridge(g, sys.argv[1])
 
 g.cover()
-g.content()
-for i in range(4):
-    g.content()
-g.full_image()
+for i in range(18):
+    if random.randint(0, 100) < 77:
+        g.content()
+    else:
+        g.full_image()
