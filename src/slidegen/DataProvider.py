@@ -83,7 +83,10 @@ class DataProvider(DataProviderBase):
         ])
 
     def text(self):
-        pass
+        return random.choice([
+            'ㄗㄘ的個資在我手上',
+            '我想要睡覺，很睏很睏'
+        ])
 
 if __name__ == '__main__':
     p = DataProvider()
