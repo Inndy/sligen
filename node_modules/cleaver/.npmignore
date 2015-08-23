@@ -1,0 +1,4 @@
+node_modules/
+test_slides/
+*.html
+.DS_Store
