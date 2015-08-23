@@ -1,0 +1,4 @@
+pixbay = {
+    'user': 'user@example.com',
+    'pass': 'this is my password'
+}
