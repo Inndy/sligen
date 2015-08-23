@@ -15,6 +15,9 @@ class Wordgen(object):
                 self.other.append(word)
 
     def moistPhrase(self):
-        verb_len = len(self.verb)
-        res = [self.verb[random.randint(0, verb_len - 1)]] + [self.other[i] for i in random.sample(range(len(self.other)), 2)]
+        XD = 6
+        res = [self.other[i] for i in random.sample(range(len(self.other)), 2)]
+        if random.randint(0, XD) == 0:
+            verb_len = len(self.verb)
+            res = [self.verb[random.randint(0, verb_len - 1)]] + res
         return ''.join(res)
