@@ -17,6 +17,15 @@ An slide generator that makes you pitch like a boss.
     - jieba
     - jinja2
 
+## Other Open Source Library We Used
+
+- [jinja2](https://github.com/mitsuhiko/jinja2)
+- [beautifulsoup4](http://www.crummy.com/software/BeautifulSoup)
+- [requests](https://github.com/kennethreitz/requests)
+- [jieba](https://github.com/fxsjy/jieba)
+- [reveal.js](https://github.com/hakimel/reveal.js)
+- [Chart.js](https://github.com/nnnick/Chart.js)
+
 ## License
 
 [MIT License](LICENSE)
