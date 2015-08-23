@@ -19,7 +19,7 @@ for f in flist:
     print(f)
     with open(f, encoding='utf-8') as fo:
         i = random.randint(0,3)
-        if i > 2:
+        if i > 0:
             s_all.append('<section data-markdown>\n'+fo.read()+'\n</section>\n')
         else:
             r = random.choice(cht)
