@@ -41,7 +41,7 @@ class DataProvider(DataProviderBase):
         self.counter = 0
 
     def image(self, size='medium'):
-        return random.choice(glob('data/img/*'))
+        return '../' + random.choice(glob('data/img/*'))
 
     def who(self):
         return random.choice([
