@@ -5,7 +5,7 @@ import random
 
 env = Environment()
 env.loader = jinja2.FileSystemLoader('.')
-tem = env.get_template('./temp.html')
+tem = env.get_template('./template.html')
 s_all = []
 
 cht = []
