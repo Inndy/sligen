@@ -14,3 +14,6 @@ print(g.content())
 for i in range(4):
     print(g.content())
 print(g.full_image())
+print('''
+# Q & A
+''')
