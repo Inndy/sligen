@@ -13,9 +13,11 @@ for s in glob.glob('Chart.js/samples/*'):
     print(s)
     cht.append(s)
 
-for f in glob.glob('slides/*.md'):
+flist = glob.glob('slides/*.md')
+flist.sort()
+for f in flist:
     print(f)
-    with open(f) as fo:
+    with open(f, encoding='utf-8') as fo:
         i = random.randint(0,3)
         if i > 2:
             s_all.append('<section data-markdown>\n'+fo.read()+'\n</section>\n')
@@ -25,5 +27,5 @@ for f in glob.glob('slides/*.md'):
 
 out = tem.render(slides = s_all)
 
-index = open("output.html", "w")
+index = open("output.html", "w", encoding='utf-8')
 index.write(out)
