@@ -11,11 +11,11 @@ An slide generator that makes you pitch like a boss.
 
 ## Dependency
 
-- nodejs
 - python 3
     - beautifulsoup4
     - requests
     - jieba
+    - jinja2
 
 ## License
 
