@@ -19,13 +19,13 @@
             error_reporting(0);
             if($_POST['generate']) {
                 $pwd = dirname(__FILE__);
-                system("cd {$pwd} && make 2>&1 >/dev/null");
+                system("cd '{$pwd}' && python3 src/generate.py");
                 echo '<p class="text-success">Enjoy your slide!</p>';
             }
         ?>
         <form action="." method="POST">
             <input type="hidden" name="generate" value="1">
-            <a href="main/output.html" class="btn btn-lg btn-success" target="_blank">
+            <a href="public/" class="btn btn-lg btn-success" target="_blank">
                 <span class="glyphicon glyphicon-film"></span> Preview
             </a>
             <button type="submit" class="btn btn-lg btn-primary">
