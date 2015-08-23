@@ -71,6 +71,14 @@ class Seperator(MarkdownObject):
     def render(self):
         return '---\n\n'
 
+class Image(MarkdownObject):
+    def __init__(self, src, desc=''):
+        self.src = src
+        self.desc = desc
+
+    def render(self):
+        return '![%s](%s)\n\n' % (self.desc, self.src)
+
 if __name__ == '__main__':
     doc = MarkdownDocument()
     doc.add(Heading('SlideGen Project'))

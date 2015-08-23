@@ -76,9 +76,10 @@ class DataProvider(DataProviderBase):
     def title(self):
         return random.choice([
             '十億人都驚呆了！%s憑空產生能源' % self.company(),
-            '%s 推出新款 %s，完全開源！' % (self.company(), self.product()),
-            '%s 宣布，%s旗下%s即將開源' % (self.who(), self.company(), self.product()),
-            '%s %s即將全面開源？！' % (self.company(), self.product())
+            '%s推出新款%s，完全開源！' % (self.company(), self.product()),
+            '%s宣布，%s旗下%s即將開源' % (self.who(), self.company(), self.product()),
+            '%s %s即將全面開源？！' % (self.company(), self.product()),
+            '%s宣布%s的bug全部當成feature' % (self.who(), self.product())
         ])
 
     def text(self):
