@@ -2,10 +2,18 @@ import os
 import sys
 from slidegen import Generator
 from slidegen import DataProvider
+from wordgen import Wordgen
 
 if len(sys.argv) < 2:
     print('Usage: %s output-path' % sys.argv[0])
     exit(1)
+
+class WordgenProvider(DataProvider):
+    def __init__(self):
+        self.wg = Wordgen()
+
+    def text(self):
+        return self.wg.moistPhrase()
 
 class GeneratorBridge(object):
     def __init__(self, generator, output_path):
@@ -25,7 +33,7 @@ class GeneratorBridge(object):
             return self.__hook(f(*args))
         return _proc
 
-g = Generator(DataProvider())
+g = Generator(WordgenProvider())
 g = GeneratorBridge(g, sys.argv[1])
 
 g.cover()
