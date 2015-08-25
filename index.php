@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sligen Online Demo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <style>
     body {
         font-size: 1.5em;
@@ -25,13 +26,13 @@
         ?>
         <form action="." method="POST">
             <input type="hidden" name="generate" value="1">
-            <a href="public/" class="btn btn-lg btn-success" target="_blank">
+            <a href="public/" class="btn btn-success" target="_blank">
                 <span class="glyphicon glyphicon-film"></span> Preview
             </a>
-            <button type="submit" class="btn btn-lg btn-primary">
+            <button type="submit" class="btn btn-primary">
                 <span class="glyphicon glyphicon-random"></span> Generate
             </button>
-            <a href="https://github.com/Inndy/sligen" class="btn btn-lg btn-info">
+            <a href="https://github.com/Inndy/sligen" class="btn btn-info">
                 <span class="glyphicon glyphicon-download-alt"></span> GitHub
             </a>
         </form>
